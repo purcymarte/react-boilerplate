@@ -30,3 +30,8 @@ export const StyledLink = styled(Link)`
   font-family: ${props => props.theme.font.family};
   padding: 8px;
 `
+
+export const TextBlock = styled.div`
+  padding: 24px 16px;
+  margin: 0 auto;
+`

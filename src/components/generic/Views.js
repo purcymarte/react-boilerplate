@@ -4,6 +4,7 @@ import styled, {css} from 'styled-components'
 
 export const Box = styled.div`
   // flex container behaviour
+  position:relative;
   display: flex;
   flex-direction: ${props => props.row ? 'row' : 'column'}; // column layout by default
   align-items: ${props => props.center ? !props.row ? 'center' : 'unset' : 'unset'}; // horizontal center align
@@ -23,6 +24,12 @@ export const Box = styled.div`
   min-width: ${props => props.minWidth || '240px'};  // basic responsive layout
   max-width: ${props => props.maxWidth || '720px'};  // basic responsive layout
   
+  ${props => (props.fitContent) && css`
+    min-height: fit-content; // fit height to content
+    max-height: fit-content; // fit height to content
+    height: fit-content; // fit height to content
+  `}
+
   ${props => (props.height) && css`
     min-height: ${props.height}; // fixed height if required
     max-height: ${props.height}; // fixed height if required
@@ -46,14 +53,18 @@ export const Section = styled.section`
   width: 100vw;
   flex-direction: column;
   align-items: center;
-  position:absolute;
+  position:fixed;
   top:0;
   left:0;
   right:0;
   bottom:0;
   overflow:hidden;
-  background:yellow;
   z-index: ${(props) => (props && props.z ? props.z.toString() : '3')}
+`
+
+export const NavBar = styled(Box)`
+  justify-content: flex-end !important;
+  width:100%;
 `
 
 export const SectionMain = styled(Section)`

@@ -1,6 +1,6 @@
 export const theme = {
 	color: {
-	  main: 'black',
+	  main: 'aquamarine',
 	  secondary: 'grey'
 	},
 	font: {
