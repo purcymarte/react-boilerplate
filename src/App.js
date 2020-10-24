@@ -8,10 +8,10 @@ import { store, persistor } from './redux/store';
 
 import Routes from './routes'
 import Navigation from './screens/Navigation'
+import Footer from './screens/Footer'
 import { Section } from './components/generic/Views'
 
 import { theme } from './styles/theme'
-import { GlobalStyle } from './styles/global'
 
 
 function App() {
@@ -23,10 +23,10 @@ function App() {
             <Section>
               <Navigation />
               <Routes />
+              <Footer />
             </Section>
           </Router>
         </ThemeProvider>
-        <GlobalStyle/>
       </PersistGate>
     </Provider>
   );

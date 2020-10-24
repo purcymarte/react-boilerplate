@@ -1,14 +1,18 @@
 import React from 'react';
 import { Link } from 'react-router-dom'
-import {Box, NavBar} from '../components/generic/Views'
+import {NavBar, NavContent} from '../components/generic/Views'
 import {Title1, StyledLink} from '../components/generic/Text'
 
 function Navigation() {
   return (
-    <NavBar row height='60px'>
-      <StyledLink to="/">home</StyledLink>
-	  <StyledLink to="/example-page">example</StyledLink>
-	  <Box width='60px' style={{background: 'grey'}}></Box>
+    <NavBar background='#cf6a87'>
+        <NavContent>
+          <StyledLink to="/">home</StyledLink>
+	      <StyledLink to="/example-page">item</StyledLink>
+	      <StyledLink to="/example-page">item</StyledLink>
+	      <StyledLink to="/example-page">item</StyledLink>
+	      <StyledLink to="/example-page">item</StyledLink>
+	    </NavContent>
     </NavBar>
   );
 }
